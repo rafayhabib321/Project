@@ -12,6 +12,7 @@ int main (){
 	}
 	if (num %2==0){
 		even_count++;
+		continue;
 	}else{
 		odd_count++;
 	}
