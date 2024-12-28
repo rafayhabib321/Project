@@ -1,53 +1,51 @@
 #include <iostream>
 using namespace std;
-
-int main(){
+int main (){
+	float a,b;
 	int choice;
-	double balance = 1000;
-	double totalbill =0; 
-	double d =0;
-	double w =0;	
-        // Display the menu
-        cout << "\n\t\t\tWELCOME:\n";
-        cout << "\n1. Check balance\n";
-        cout << "2. Withdraw Money\n";
-        cout << "3. Deposit Money\n";
-        cout << "4. Exit\n";
-    do{  cout<<"\nEnter your choice (1-4): ";
-    	 cin>>choice;	
-switch(choice){
-	case 1:
-		cout<<"CHECK BALANCE\n";
-		cout<<"your total balance is: $"<<balance<<endl;
-		break;
-	case 2:
-		cout<<"(WITHDRAW MONEY)\n";
-		cout<<"$";cin>>w;
-		if(w<=1000){
-		balance -=w ;
-		cout<<"Your total balance after withdraw: $"<<balance<<endl;
-	}else{
-		cout<<"you balance is sufficient.\n";
-		return 0;
-	}
-		break;
-	case 3:
-		cout<<"(DEPOSITE MONEY)\n";
-		cout<<"$";cin>>d;
-		d += balance ;
-		cout<<"you deposite: $"<<d<<endl;
-		break;
-	case 4:	
-		cout<<"(-_-)\n";
-		break;
-	default:
-		cout<<"please enter: (1-4)\n";
-		break;
-}
-	
-}while (choice!=4);{
-	cout<<"Have a good day\n";
-}
+	float result;
+	cout<<"\n\t\tW E L C O M E\n";
+	cout<<"Enter 2 number you want to calculate:\n";
+	cout<<"a: ";cin>>a;cout<<"b: ";cin>>b;
+	do{
+	cout<<"\n\n1.Addition\n";
+	cout<<"2.Subtraction\n";
+	cout<<"3.Multiplication\n";
+	cout<<"4.Division\n";
+	cout<<"5.Exit\n";
+	cout<<"\nEnter your choice(1-5): ";
+	cin>>choice;
 
-return 0;           
+	switch(choice){
+		case 1:
+		result = a + b;
+			cout<<"Addition: "<<result;
+			break;
+			case 2:	
+				result = a - b;
+				cout<<"Subtraction: "<<result;
+				break;
+				case 3:
+					result = a * b;
+					cout<<"Multiplication: "<<result;
+					break;
+					case 4:
+						if(a==0||b==0){
+							cout<<"cant divide by zero 0: ";
+						}else{
+							result = a/b;
+							cout<<"Divide: "<<result;
+							break;
+						}
+						case 5:
+							cout<<"exiting";
+							break;
+						
+		default:
+		cout<<"wrong number";
+	}
+}while(choice!=5);{
+	cout<<"exiting";	
+}
+	return 0;
 }

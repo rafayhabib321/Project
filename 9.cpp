@@ -1,19 +1,19 @@
 #include <iostream>
 using namespace std;
 int main (){
-	int num;
-	cout<<"Enter a number: ";
-	cin>>num;
+	int n;
 	
-	if(num <=0){
-		cout<<"Enter a pasitive integer.\n";
+	cout<<"Enter a number: ";
+	cin>>n;
+	if(n<=0){
+		cout<<"ENTER A POSITIVE INTEGER.";
 	}else{
-		cout<<"\ndivision of "<<num<<" is,\n";
+		cout<<"table of: "<<n<<" is\n";
+	
+		cout<<"\nNumbers"<<"\tSquares"<<"\tCubes\n";
 	}
-	for(int i=1; i<=num; i++){
-		if (num %i ==0){
-			cout<<i<<" , ";
-		}
+	for(int i=1; i<=n ; i++){
+		cout<<i<<"\t"<<i*i<<"\t"<<i*i*i<<endl;
 	}
 	return 0;
 }

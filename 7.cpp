@@ -1,22 +1,19 @@
 #include <iostream>
 using namespace std;
 int main (){
-	int password = 1234;
-	int user_password;
+	int num;
+	cout<<"Enter a number: ";
+	cin>>num;
 	
-	cout<<"Enter your password: \n";
-	
-	for(int i = 2; i >=0 ; i--){
-			cin>>user_password;
-		if(user_password == password){
-			cout<<"\nCorrect password\n";
-			cout<<"Welcome : Rafay";
-			break;
-		}else{
-			cout<<"\n\tincorrect password\n";
-			cout<<"\nremaining attempt: "<<i<<endl;
+	if(num <=0){
+		cout<<"Enter a pasitive integer.\n";
+	}else{
+		cout<<"\ndivision of "<<num<<" is,\n";
+	}
+	for(int i=1; i<=num; i++){
+		if (num %i ==0){
+			cout<<i<<" , ";
 		}
 	}
-	
 	return 0;
 }

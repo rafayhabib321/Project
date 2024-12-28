@@ -1,51 +1,29 @@
 #include <iostream>
 using namespace std;
 int main (){
-	float a,b;
-	int choice;
-	float result;
-	cout<<"\n\t\tW E L C O M E\n";
-	cout<<"Enter 2 number you want to calculate:\n";
-	cout<<"a: ";cin>>a;cout<<"b: ";cin>>b;
-	do{
-	cout<<"\n\n1.Addition\n";
-	cout<<"2.Subtraction\n";
-	cout<<"3.Multiplication\n";
-	cout<<"4.Division\n";
-	cout<<"5.Exit\n";
-	cout<<"\nEnter your choice(1-5): ";
-	cin>>choice;
-
-	switch(choice){
-		case 1:
-		result = a + b;
-			cout<<"Addition: "<<result;
-			break;
-			case 2:	
-				result = a - b;
-				cout<<"Subtraction: "<<result;
-				break;
-				case 3:
-					result = a * b;
-					cout<<"Multiplication: "<<result;
-					break;
-					case 4:
-						if(a==0||b==0){
-							cout<<"cant divide by zero 0: ";
-						}else{
-							result = a/b;
-							cout<<"Divide: "<<result;
-							break;
-						}
-						case 5:
-							cout<<"exiting";
-							break;
-						
-		default:
-		cout<<"wrong number";
+	int marks;
+	int total_marks = 0;
+		cout<<"(0) for total marks\n";
+		do{
+	cout<<"\nEnter your grade. (1-100).\n";
+	cin>>marks;
+	total_marks += marks;
+		if(marks>= 90 && marks<=100){
+			cout<<"\tyour grade is 'A'\n";
+		}if (marks>= 80 && marks<=89){
+			cout<<"\tyour grade is 'B'\n";
+		}if (marks>=70 && marks<=79){
+			cout<<"\tyour grade is 'C'\n";
+		}if (marks>=60 && marks<=69){
+			cout<<"\tyour grade is 'D'\n";
+		}else if (marks<60 && marks>1){
+			cout<<"\tyour grade is 'F'\n";
+		}else if(marks>0 && marks>100){
+			cout<<"incorrect grade";
+		}
+	}while(marks!=0);{
+		cout<<"Total marks for all grade: "<<total_marks;
 	}
-}while(choice!=5);{
-	cout<<"exiting";	
-}
+	
 	return 0;
 }
